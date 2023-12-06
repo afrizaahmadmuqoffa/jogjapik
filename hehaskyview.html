@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heha Sky View</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      max-width: 100%;
+      box-sizing: border-box;
+      text-decoration: none;
+      list-style: none;
+      scroll-behavior: smooth;
+      font-family: 'Poppins', sans-serif;
+    }
+
+
+    #navbar {
+      background: #f9f9f9;
+    }
+
+    #logo {
+      font-size: 36px;
+      font-weight: 700;
+      color: black;
+      text-shadow: 0px 1px 1px black;
+      margin-bottom: 5px;
+    }
+
+    #logo span {
+      color: rgb(13, 194, 194);
+    }
+
+    .navbar-toggler span {
+      color: rgb(13, 194, 194);
+    }
+
+    .navbar-nav {
+      margin-left: 15px;
+    }
+
+    .nav-item .nav-link {
+      font-size: 16px;
+      font-weight: 500;
+      color: black;
+      letter-spacing: 1px;
+      border-radius: 3px;
+      transition: 0.3 ease;
+    }
+
+    .nav-item .nav-link:hover {
+      background: rgb(13, 194, 194);
+    }
+
+    #navbar form button {
+      background: rgb(13, 194, 194);
+      color: black;
+      border: none;
+    }
+
+    .container {
+      max-width: 40em;
+      margin: 0 auto;
+      padding: 1em;
+    }
+
+    h1 {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+
+    .container span {
+      color: rgb(13, 194, 194);
+    }
+
+    .main-txt h1 {
+      text-align: center;
+      margin-top: 30px;
+      font-weight: 600;
+      font-size: 2.3rem;
+    }
+
+    .main-txt span {
+      color: rgb(13, 194, 194);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 1em 0;
+    }
+
+    p {
+      font-size: 1.125rem;
+      line-height: 1.6;
+    }
+
+    .rating {
+      display: flex;
+      justify-content: center;
+      font-size: 2.5em;
+    }
+
+    .star {
+      cursor: pointer;
+    }
+
+    .star:hover,
+    .star.active {
+      color: yellow;
+    }
+
+    #carouselExampleIndicators {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+
+    #review-message {
+      display: flex;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+
+    #user-review {
+      width: 100%;
+      max-width: 500px;
+      max-height: 500px;
+      margin: 0 auto;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #submit-review {
+      display: block;
+      margin: 0 auto;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #submit-review:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      padding: 10px;
+      background-color: #f3f3f3;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 15px;
+      color: #000;
+    }
+
+    @media (min-width:1180px) {
+      .navbar-nav {
+        margin-left: 60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg sticky-top" id="navbar">
+    <div class="container-md">
+      <a class="navbar-brand" href="#" id="logo"> <span>J</span>ogjapik</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fa-solid fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 lg-0">
+          <li class="nav-item mx-4">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item mx-4">
+            <a class="nav-link" href="index.html#destination">Destination</a>
+          </li>
+          <li class="nav-item mx-4">
+            <a class="nav-link" href="index.html#review">Review</a>
+          </li>
+          <li class="nav-item mx-4">
+            <a class="nav-link" href="index.html#about">About</a>
+          </li>
+          <form class="d-flex ms-lg-auto mb-2 mb-lg-0" role="search" id="searchForm">
+            <input class="form-control me-2" type="search" id="searchInput" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Heha Sky view
+    </h1>
+    <img src="heha sky view.jpg" alt="">
+    <p>
+      Heha Sky View adalah destinasi menakjubkan di Yogyakarta, Indonesia. Tempat ini menawarkan pengalaman mengesankan
+      melihat keindahan alam dari ketinggian. Dengan fasilitas terbaik, pengunjung dapat menikmati panorama luar biasa
+      kota dan pegunungan. Heha Sky View memiliki beragam kegiatan menarik, seperti sky swing dan jembatan gantung yang
+      menantang adrenalin. Area ini cocok untuk berfoto dan menciptakan kenangan tak terlupakan. Pemandangan spektakuler
+      matahari terbenam menjadi momen puncak bagi pengunjung. Dengan suasana yang tenang dan pemandangan yang
+      menakjubkan, Heha Sky View menjadi tempat yang ideal untuk bersantai dan menikmati pesona alam Yogyakarta.
+    </p>
+  </div>
+
+  <div class="container-carousel">
+    <div class="main-txt">
+      <h1><span>G</span>allery</h1>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide mx-auto" data-bs-ride="true">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="heha1.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="heha2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="heha3.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="rating">
+    <span class="star" data-value="1">&#9733;</span>
+    <span class="star" data-value="2">&#9733;</span>
+    <span class="star" data-value="3">&#9733;</span>
+    <span class="star" data-value="4">&#9733;</span>
+    <span class="star" data-value="5">&#9733;</span>
+  </div>
+
+  <div class="form-group">
+    <textarea class="form-control" id="user-review" rows="3"></textarea>
+    <button class="btn btn-primary" id="submit-review">Submit</button>
+  </div>
+  <footer>
+    <p>&copy; 2023 Alt+F4 Team. All rights reserved.</p>
+  </footer>
+
+
+
+
+</body>
+<script>
+  const stars = document.querySelectorAll(".star");
+  const reviewMessage = document.getElementById("review-message");
+
+  stars.forEach((star) => {
+    star.addEventListener("click", () => {
+      const rating = parseInt(star.getAttribute("data-value"));
+      highlightStars(rating);
+      showReviewMessage(rating);
+    });
+  });
+
+  function highlightStars(selectedRating) {
+    stars.forEach((star) => {
+      const rating = parseInt(star.getAttribute("data-value"));
+      if (rating <= selectedRating) {
+        star.classList.add("active");
+      } else {
+        star.classList.remove("active");
+      }
+    });
+  }
+
+  function showReviewMessage(rating) {
+    let message = "";
+    switch (rating) {
+      case 1:
+        message = "Sangat kecewa";
+        break;
+      case 2:
+        message = "Kecewa";
+        break;
+      case 3:
+        message = "Netral";
+        break;
+      case 4:
+        message = "Bagus";
+        break;
+      case 5:
+        message = "Sangat bagus";
+        break;
+      default:
+        message = "Silakan pilih rating dari 1 hingga 5.";
+    }
+    reviewMessage.textContent = message;
+  }
+
+
+</script>
+<script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</html>
